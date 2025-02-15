@@ -9,6 +9,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
 
 export default function Header() {
   return (
@@ -23,7 +24,7 @@ export default function Header() {
             />
           </Link>
 
-          <NavigationMenu>
+          <NavigationMenu className="relative">
             <NavigationMenuList className="hidden md:flex">
               <NavigationMenuItem>
                 <Link href="/">
@@ -35,9 +36,9 @@ export default function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                <NavigationMenuContent className="z-[100]">
-                  <div className="w-[600px] p-4">
-                    <div className="grid grid-cols-2 gap-4">
+                <NavigationMenuContent>
+                  <div className="w-[300px] p-2">
+                    <div className="flex flex-col space-y-1">
                       <ListItem
                         href="/services/cafeteria"
                         title="F&B Counter"
@@ -87,8 +88,7 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <button className="md:hidden p-2">
-              <span className="sr-only">Open main menu</span>
-              {/* Add your mobile menu icon here */}
+              <Menu className="h-6 w-6" />
             </button>
           </NavigationMenu>
         </div>
@@ -96,7 +96,32 @@ export default function Header() {
 
       {/* Mobile Menu (hidden by default) */}
       <div className="md:hidden">
-        {/* Add your mobile menu content here */}
+        <div className="px-2 pt-2 pb-3 space-y-1">
+          <Link href="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+            Home
+          </Link>
+          <Link href="/services/cafeteria" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+            F&B Counter
+          </Link>
+          <Link href="/services/vending/coffee" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+            Tea/Coffee Vending
+          </Link>
+          <Link href="/services/vending/snacks" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+            Snacks Vending
+          </Link>
+          <Link href="/services/housekeeping" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+            B2B/Housekeeping
+          </Link>
+          <Link href="/services/stationary" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+            Stationary Supply
+          </Link>
+          <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+            About Us
+          </Link>
+          <Link href="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+            Contact
+          </Link>
+        </div>
       </div>
     </header>
   );
@@ -119,13 +144,13 @@ const ListItem = ({
       <Link
         href={href}
         className={cn(
-          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
           className
         )}
         {...props}
       >
-        <div className="text-sm font-medium leading-none">{title}</div>
-        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+        <div className="text-sm font-medium leading-none mb-1">{title}</div>
+        <p className="text-xs leading-snug text-muted-foreground">
           {description}
         </p>
       </Link>

@@ -24,7 +24,7 @@ export default function Header() {
           </Link>
 
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className="hidden md:flex">
               <NavigationMenuItem>
                 <Link href="/">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -84,8 +84,19 @@ export default function Header() {
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
+
+            {/* Mobile Menu Button */}
+            <button className="md:hidden p-2">
+              <span className="sr-only">Open main menu</span>
+              {/* Add your mobile menu icon here */}
+            </button>
           </NavigationMenu>
         </div>
+      </div>
+
+      {/* Mobile Menu (hidden by default) */}
+      <div className="md:hidden">
+        {/* Add your mobile menu content here */}
       </div>
     </header>
   );
@@ -104,22 +115,20 @@ const ListItem = ({
   href: string;
 }) => {
   return (
-    <li>
-      <NavigationMenuLink asChild>
-        <Link
-          href={href}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {description}
-          </p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
+    <NavigationMenuLink asChild>
+      <Link
+        href={href}
+        className={cn(
+          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          className
+        )}
+        {...props}
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
+        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          {description}
+        </p>
+      </Link>
+    </NavigationMenuLink>
   );
 };

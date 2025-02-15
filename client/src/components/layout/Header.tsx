@@ -23,7 +23,7 @@ export default function Header() {
             />
           </Link>
 
-          <NavigationMenu className="relative">
+          <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/">
@@ -35,34 +35,36 @@ export default function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] absolute left-1/2 transform -translate-x-1/2">
-                    <ListItem
-                      href="/services/cafeteria"
-                      title="F&B Counter"
-                      description="Modern Corporate Cafeteria Management Solutions"
-                    />
-                    <ListItem
-                      href="/services/vending/coffee"
-                      title="Tea/Coffee Vending"
-                      description="Smart Coffee and Tea Vending Solutions"
-                    />
-                    <ListItem
-                      href="/services/vending/snacks"
-                      title="Snacks Vending"
-                      description="Automated Snacks and Beverages Vending"
-                    />
-                    <ListItem
-                      href="/services/housekeeping"
-                      title="B2B/Housekeeping"
-                      description="Professional Housekeeping Services"
-                    />
-                    <ListItem
-                      href="/services/stationary"
-                      title="Stationary Supply"
-                      description="Office Supplies and Cleaning Products"
-                    />
-                  </ul>
+                <NavigationMenuContent className="z-[100]">
+                  <div className="w-[600px] p-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <ListItem
+                        href="/services/cafeteria"
+                        title="F&B Counter"
+                        description="Modern Corporate Cafeteria Management Solutions"
+                      />
+                      <ListItem
+                        href="/services/vending/coffee"
+                        title="Tea/Coffee Vending"
+                        description="Smart Coffee and Tea Vending Solutions"
+                      />
+                      <ListItem
+                        href="/services/vending/snacks"
+                        title="Snacks Vending"
+                        description="Automated Snacks and Beverages Vending"
+                      />
+                      <ListItem
+                        href="/services/housekeeping"
+                        title="B2B/Housekeeping"
+                        description="Professional Housekeeping Services"
+                      />
+                      <ListItem
+                        href="/services/stationary"
+                        title="Stationary Supply"
+                        description="Office Supplies and Cleaning Products"
+                      />
+                    </div>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 

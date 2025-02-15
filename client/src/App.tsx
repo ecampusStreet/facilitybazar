@@ -9,6 +9,8 @@ import CoffeeVendingPage from "@/pages/services/vending/coffee";
 import SnacksVendingPage from "@/pages/services/vending/snacks";
 import HousekeepingPage from "@/pages/services/housekeeping";
 import StationaryPage from "@/pages/services/stationary";
+import AboutPage from "@/pages/about";
+import ContactPage from "@/pages/contact";
 
 function Router() {
   return (
@@ -19,6 +21,8 @@ function Router() {
       <Route path="/services/vending/snacks" component={SnacksVendingPage} />
       <Route path="/services/housekeeping" component={HousekeepingPage} />
       <Route path="/services/stationary" component={StationaryPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>
   );

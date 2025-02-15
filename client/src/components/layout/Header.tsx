@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useState } from "react";
 import { 
   NavigationMenu,
   NavigationMenuContent,
@@ -9,9 +10,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="bg-white border-b sticky top-0 z-50">
       <div className="container mx-auto">
@@ -87,38 +90,85 @@ export default function Header() {
             </NavigationMenuList>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2">
-              <Menu className="h-6 w-6" />
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 hover:bg-gray-100 rounded-md transition-colors"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </NavigationMenu>
         </div>
       </div>
 
-      {/* Mobile Menu (hidden by default) */}
-      <div className="md:hidden">
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <Link href="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+      {/* Mobile Menu */}
+      <div 
+        className={cn(
+          "md:hidden transition-all duration-300 ease-in-out",
+          isMenuOpen 
+            ? "max-h-screen opacity-100 visible" 
+            : "max-h-0 opacity-0 invisible"
+        )}
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+          <Link 
+            href="/" 
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Home
           </Link>
-          <Link href="/services/cafeteria" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+          <Link 
+            href="/services/cafeteria" 
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             F&B Counter
           </Link>
-          <Link href="/services/vending/coffee" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+          <Link 
+            href="/services/vending/coffee" 
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Tea/Coffee Vending
           </Link>
-          <Link href="/services/vending/snacks" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+          <Link 
+            href="/services/vending/snacks" 
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Snacks Vending
           </Link>
-          <Link href="/services/housekeeping" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+          <Link 
+            href="/services/housekeeping" 
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             B2B/Housekeeping
           </Link>
-          <Link href="/services/stationary" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+          <Link 
+            href="/services/stationary" 
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Stationary Supply
           </Link>
-          <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+          <Link 
+            href="/about" 
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             About Us
           </Link>
-          <Link href="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">
+          <Link 
+            href="/contact" 
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Contact
           </Link>
         </div>

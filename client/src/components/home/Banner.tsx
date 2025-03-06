@@ -10,7 +10,7 @@ const formSchema = z.object({
   mobile: z.string().min(10),
   email: z.string().email(),
   city: z.string().min(2),
-  requirement: z.string().min(2)
+  requirement: z.string().min(2),
 });
 
 export default function Banner() {
@@ -21,8 +21,8 @@ export default function Banner() {
       mobile: "",
       email: "",
       city: "",
-      requirement: ""
-    }
+      requirement: "",
+    },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
@@ -30,20 +30,28 @@ export default function Banner() {
   }
 
   return (
-    <section className="banner relative min-h-[600px] bg-gray-100">
-      <div className="container mx-auto pt-20 pb-10">
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-black mb-4">
-            Facility Bazar
-          </h2>
-          <p className="text-xl text-black">
-            Modern Corporate Cafeteria – A Perfect Blend of Comfort & Convenience
-          </p>
-        </div>
+    <section className="banner relative min-h-screen bg-gray-900 text-white flex flex-col justify-between">
+      {/* Hero Section */}
+      <div className="container mx-auto flex flex-col items-center text-center py-18">
+        <h2 className="text-5xl font-extrabold mb-4 text-[#fff]">
+          Facility Bazar
+        </h2>
+        <p className="text-lg max-w-3xl text-gray-300">
+          Modern Corporate Cafeteria – A Perfect Blend of Comfort & Convenience
+        </p>
+      </div>
 
-        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      {/* Form Section */}
+      <div className="bg-white text-black border-b-4 border-[#4775FF] py-6 mb-5 mt-5">
+        <div className="container mx-auto max-w-4xl px-2">
+          <h3 className="text-2xl font-semibold text-center mb-4">
+            Get in Touch
+          </h3>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4"
+            >
               <FormField
                 control={form.control}
                 name="name"

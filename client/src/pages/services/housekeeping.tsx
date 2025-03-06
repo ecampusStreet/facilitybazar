@@ -3,46 +3,57 @@ import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, ShieldCheck, Recycle, Users } from "lucide-react";
+import housekeepingSuply from "../../assets/housekeepingSuply.jpeg";
 
 const services = [
   {
     icon: Sparkles,
     title: "Cleaning Solutions",
-    description: "Comprehensive selection of eco-friendly cleaning agents for various surfaces, ensuring a pristine workspace."
+    description:
+      "Comprehensive selection of eco-friendly cleaning agents for various surfaces, ensuring a pristine workspace.",
   },
   {
     icon: ShieldCheck,
     title: "Sanitization",
-    description: "Advanced sanitizing products for maintaining a healthy workspace with protection against harmful bacteria."
+    description:
+      "Advanced sanitizing products for maintaining a healthy workspace with protection against harmful bacteria.",
   },
   {
     icon: Recycle,
     title: "Waste Management",
-    description: "Complete waste management solutions including bins, recycling containers, and efficient segregation systems."
+    description:
+      "Complete waste management solutions including bins, recycling containers, and efficient segregation systems.",
   },
   {
     icon: Users,
     title: "Staff Support",
-    description: "Professional housekeeping staff and support for maintaining clean and organized workspaces."
-  }
+    description:
+      "Professional housekeeping staff and support for maintaining clean and organized workspaces.",
+  },
 ];
 
 const features = [
   {
     title: "Building Maintenance",
-    description: "Comprehensive maintenance of core building systems including HVAC, electrical, and plumbing.",
-    image: "/img/building-maintenance.jpg"
+    description:
+      "Comprehensive maintenance of core building systems including HVAC, electrical, and plumbing.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1667520474224-5c4864b690e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Space Management",
-    description: "Efficient space planning and utilization to optimize workplace functionality.",
-    image: "/img/space-management.jpg"
+    description:
+      "Efficient space planning and utilization to optimize workplace functionality.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1667520474224-5c4864b690e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Safety Compliance",
-    description: "Ensuring adherence to health and safety standards with regular monitoring.",
-    image: "/img/safety-compliance.jpg"
-  }
+    description:
+      "Ensuring adherence to health and safety standards with regular monitoring.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1667520474224-5c4864b690e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
 ];
 
 export default function HousekeepingPage() {
@@ -51,26 +62,27 @@ export default function HousekeepingPage() {
       <Header />
       <main className="flex-grow">
         <div className="relative h-[400px] bg-gradient-to-r from-green-600 to-green-800">
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute houseBackground inset-0" />
           <div className="relative container mx-auto h-full flex items-center">
-            <div className="text-white max-w-2xl">
+            <div className="text-white max-w-2xl px-10">
               <h1 className="text-4xl font-bold mb-4">
                 Professional B2B Housekeeping Services
               </h1>
               <p className="text-lg">
-                Comprehensive facility management and housekeeping solutions for corporate environments
+                Comprehensive facility management and housekeeping solutions for
+                corporate environments
               </p>
             </div>
           </div>
         </div>
 
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50 px-10">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Services</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                We provide complete housekeeping and maintenance solutions to keep your workplace
-                clean, organized, and efficient.
+                We provide complete housekeeping and maintenance solutions to
+                keep your workplace clean, organized, and efficient.
               </p>
             </div>
 
@@ -88,7 +100,7 @@ export default function HousekeepingPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white px-10">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -100,8 +112,12 @@ export default function HousekeepingPage() {
                       className="w-full h-48 object-cover"
                     />
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                      <p className="text-gray-600 mb-4">{feature.description}</p>
+                      <h3 className="text-xl font-bold mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {feature.description}
+                      </p>
                       <Button variant="outline" className="w-full">
                         Learn More
                       </Button>
@@ -116,10 +132,12 @@ export default function HousekeepingPage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8">Ready to Transform Your Workplace?</h2>
+              <h2 className="text-3xl font-bold mb-8">
+                Ready to Transform Your Workplace?
+              </h2>
               <p className="text-gray-600 mb-8">
-                Contact us today to discuss how our professional housekeeping services can 
-                benefit your organization.
+                Contact us today to discuss how our professional housekeeping
+                services can benefit your organization.
               </p>
               <Button size="lg">Get a Quote</Button>
             </div>

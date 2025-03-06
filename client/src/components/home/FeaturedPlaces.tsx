@@ -4,31 +4,34 @@ import { Star } from "lucide-react";
 
 const places = [
   {
-    image: "/img/featured_item_1.jpg",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661962736569-58a67b0a2469?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: { day: 28, month: "August" },
     title: "Name of place",
     category: "Category One",
-    description: "Description about the place"
+    description: "Description about the place",
   },
   {
-    image: "/img/featured_item_2.jpg", 
+    image:
+      "https://plus.unsplash.com/premium_photo-1661962736569-58a67b0a2469?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: { day: 20, month: "September" },
     title: "Name of Place",
     category: "Category Two",
-    description: "Content about the place"
+    description: "Content about the place",
   },
   {
-    image: "/img/featured_item_3.jpg",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661962736569-58a67b0a2469?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: { day: 12, month: "October" },
     title: "Name of the place",
-    category: "Category Three", 
-    description: "Description of the place"
-  }
+    category: "Category Three",
+    description: "Description of the place",
+  },
 ];
 
 export default function FeaturedPlaces() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 px-10">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <span className="text-primary font-medium">Featured Places</span>
@@ -47,7 +50,10 @@ export default function FeaturedPlaces() {
                   />
                   <div className="absolute top-4 right-4 flex">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                      <Star
+                        key={i}
+                        className="h-4 w-4 text-yellow-400 fill-current"
+                      />
                     ))}
                   </div>
                   <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg text-center">

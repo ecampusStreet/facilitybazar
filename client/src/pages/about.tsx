@@ -6,23 +6,27 @@ const values = [
   {
     icon: Building2,
     title: "Professional Excellence",
-    description: "We maintain the highest standards in facility management and corporate services."
+    description:
+      "We maintain the highest standards in facility management and corporate services.",
   },
   {
     icon: Target,
     title: "Customer Focus",
-    description: "Understanding and exceeding our clients' expectations is our top priority."
+    description:
+      "Understanding and exceeding our clients' expectations is our top priority.",
   },
   {
     icon: Users,
     title: "Team Collaboration",
-    description: "Our strength lies in working together to deliver comprehensive solutions."
+    description:
+      "Our strength lies in working together to deliver comprehensive solutions.",
   },
   {
     icon: Award,
     title: "Innovation",
-    description: "We continuously evolve and adopt new technologies to enhance our services."
-  }
+    description:
+      "We continuously evolve and adopt new technologies to enhance our services.",
+  },
 ];
 
 export default function AboutPage() {
@@ -31,12 +35,13 @@ export default function AboutPage() {
       <Header />
       <main className="flex-grow">
         <div className="relative h-[400px] bg-gradient-to-r from-primary to-primary/80">
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 aboutBackground bg-black/50" />
           <div className="relative container mx-auto h-full flex items-center">
-            <div className="text-white max-w-2xl">
+            <div className="text-white max-w-2xl px-10">
               <h1 className="text-4xl font-bold mb-4">About Facility Bazar</h1>
               <p className="text-lg">
-                Your trusted partner in comprehensive facility management and corporate services
+                Your trusted partner in comprehensive facility management and
+                corporate services
               </p>
             </div>
           </div>
@@ -47,19 +52,20 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-8">
-                Facility Bazar was founded with a vision to transform corporate facility management
-                through innovative solutions and exceptional service. We understand the unique
-                challenges businesses face in maintaining efficient workspaces and have developed
+                Facility Bazar was founded with a vision to transform corporate
+                facility management through innovative solutions and exceptional
+                service. We understand the unique challenges businesses face in
+                maintaining efficient workspaces and have developed
                 comprehensive solutions to address these needs.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <img
-                  src="/img/about-1.jpg"
+                  src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Our Office"
                   className="rounded-lg shadow-lg"
                 />
                 <img
-                  src="/img/about-2.jpg"
+                  src="https://images.unsplash.com/photo-1531498352491-042fbae4cf57?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Our Team"
                   className="rounded-lg shadow-lg"
                 />
@@ -68,7 +74,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50 px-10">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -88,9 +94,10 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
               <p className="text-gray-600">
-                To provide innovative and sustainable facility management solutions that enable
-                businesses to focus on their core operations while we handle their workspace needs
-                with excellence and reliability.
+                To provide innovative and sustainable facility management
+                solutions that enable businesses to focus on their core
+                operations while we handle their workspace needs with excellence
+                and reliability.
               </p>
             </div>
           </div>

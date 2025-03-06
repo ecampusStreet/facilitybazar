@@ -9,25 +9,28 @@ import {
 
 const services = [
   {
-    icon: "/img/service_icon_1.png",
+    icon: "https://www.facilitybazar.com/img/service_icon_1.png",
     title: "High Quality Design",
-    description: "Etiam viverra nibh at lorem hendrerit porta non nec ligula. Donec hendrerit porttitor pretium."
+    description:
+      "Etiam viverra nibh at lorem hendrerit porta non nec ligula. Donec hendrerit porttitor pretium.",
   },
   {
-    icon: "/img/service_icon_2.png",
+    icon: "https://www.facilitybazar.com/img/service_icon_2.png",
     title: "Fully Customizable",
-    description: "Vivamus nec vehicula felis, sit amet convallis ex. Aenean dolor risus, rutrum at tincidunt eget."
+    description:
+      "Vivamus nec vehicula felis, sit amet convallis ex. Aenean dolor risus, rutrum at tincidunt eget.",
   },
   {
-    icon: "/img/service_icon_3.png",
+    icon: "https://www.facilitybazar.com/img/service_icon_3.png",
     title: "Best HTML CSS Layout",
-    description: "Praesent nec dui sed urna pharetra dapibus at ac elit. Aenean hendrerit metus leo."
-  }
+    description:
+      "Praesent nec dui sed urna pharetra dapibus at ac elit. Aenean hendrerit metus leo.",
+  },
 ];
 
 export default function OurServices() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white px-10">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <span className="text-primary font-medium">Our Services</span>
@@ -61,21 +64,15 @@ export default function OurServices() {
             <Accordion type="single" collapsible>
               <AccordionItem value="summer">
                 <AccordionTrigger>Summer Protein</AccordionTrigger>
-                <AccordionContent>
-                  Contents about the protein.
-                </AccordionContent>
+                <AccordionContent>Contents about the protein.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="winter">
                 <AccordionTrigger>Winter Protein</AccordionTrigger>
-                <AccordionContent>
-                  Contents about the protein.
-                </AccordionContent>
+                <AccordionContent>Contents about the protein.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="featured">
                 <AccordionTrigger>Featured Protein</AccordionTrigger>
-                <AccordionContent>
-                  Contents about the protein.
-                </AccordionContent>
+                <AccordionContent>Contents about the protein.</AccordionContent>
               </AccordionItem>
             </Accordion>
           </div>

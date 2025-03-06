@@ -7,43 +7,49 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Plus } from "lucide-react";
+import FBImg from "../../assets/F&B.jpg";
+import packedFoods from "../../assets/packedFoods.png";
+import B2B from "../../assets/B2B.png";
+import froots from "../../assets/froots.jpg";
+import supplies from "../../assets/supplies.png";
+import facilitymanagement from "../../assets/facilitymanagement.png";
 
 const services = [
   {
-    image: "/img/F&B.jpg",
+    image: FBImg,
     title: "F&B Solution",
-    listings: 76
+    listings: 76,
   },
   {
-    image: "/img/packed foods.png", 
+    image: packedFoods,
     title: "Pre Cooked Meals",
-    listings: 18
+    listings: 18,
   },
   {
-    image: "/img/B2B.png",
+    image: B2B,
     title: "B2B",
-    listings: 55
+    listings: 55,
   },
   {
-    image: "/img/supplies.png",
+    image: supplies,
     title: "Office Supplies",
-    listings: 66
+    listings: 66,
   },
   {
-    image: "/img/facility management.png",
+    image: facilitymanagement,
     title: "Facility Management",
-    listings: 82
+    listings: 82,
   },
   {
-    image: "/img/froots.jpg",
+    image: froots,
     title: "Fresh Fruits",
-    listings: 76
-  }
+    listings: 76,
+  },
 ];
 
 export default function PopularServices() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white px-20">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <span className="text-primary font-medium">Popular Services</span>
@@ -53,7 +59,7 @@ export default function PopularServices() {
         <Carousel
           opts={{
             align: "start",
-            loop: true
+            loop: true,
           }}
           className="w-full"
         >
@@ -62,7 +68,7 @@ export default function PopularServices() {
               <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
                 <Card className="relative overflow-hidden">
                   <CardContent className="p-0">
-                    <img 
+                    <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-48 object-cover"

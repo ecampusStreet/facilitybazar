@@ -1,18 +1,19 @@
 import { Facebook, Twitter, Linkedin, Rss } from "lucide-react";
+import logo from "../../assets/logo.jpg";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto">
+    <footer className="bg-gray-900 text-white py-16 px-20">
+      <div className="container mx-auto text-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <div className="mb-6">
-              <img src="/img/logo.jpg" alt="FB Logo" className="h-20" />
+              <img src={logo} alt="FB Logo" className="h-40" />
             </div>
             <p className="text-gray-400 mb-6">
-              Mauris sit amet quam congue, pulvinar urna et, congue diam. 
-              Suspendisse eu lorem massa. Integer sit amet posuere tellus, 
-              id efficitur leo. In hac habitasse platea dictumst.
+              Mauris sit amet quam congue, pulvinar urna et, congue diam.
+              Suspendisse eu lorem massa. Integer sit amet posuere tellus, id
+              efficitur leo. In hac habitasse platea dictumst.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">

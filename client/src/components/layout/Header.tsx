@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b sticky top-0 z-50 px-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-screen-xl">
         <div className="flex items-center justify-between py-4">
           <Link href="/">
             <img

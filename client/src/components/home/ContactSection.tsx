@@ -10,7 +10,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 const formSchema = z.object({
   name: z.string().min(2),
   subject: z.string().min(2),
-  message: z.string().min(10)
+  message: z.string().min(10),
 });
 
 export default function ContactSection() {
@@ -19,8 +19,8 @@ export default function ContactSection() {
     defaultValues: {
       name: "",
       subject: "",
-      message: ""
-    }
+      message: "",
+    },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
@@ -29,19 +29,18 @@ export default function ContactSection() {
 
   return (
     <section className="bg-white">
-      <div className="h-[500px] w-full">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-        />
-      </div>
-
       <div className="container mx-auto py-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="h-[500px] w-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.432561451216!2d77.55238987454712!3d13.00810331407798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17bbc051f1ab%3A0x5b567d40d77191c6!2sWebspruce!5e0!3m2!1sen!2sin!4v1741684220838!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
           <div className="text-center mb-12">
             <span className="text-primary font-medium">Contact Us</span>
             <h2 className="text-3xl font-bold mt-2">
@@ -52,7 +51,10 @@ export default function ContactSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="col-span-2">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
                   <div className="grid grid-cols-2 gap-4">
                     <FormField
                       control={form.control}
@@ -85,7 +87,7 @@ export default function ContactSection() {
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <Textarea 
+                          <Textarea
                             placeholder="Your message..."
                             className="min-h-[150px]"
                             {...field}
@@ -101,28 +103,33 @@ export default function ContactSection() {
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-6">More About Us</h3>
-              <p className="text-gray-600 mb-6">
-                Etiam viverra nibh at lorem hendrerit porta non nec ligula. 
-                Donec hendrerit porttitor pretium.
-              </p>
+              <h3 className="text-xl font-bold mb-6">
+                {" "}
+                Have questions? Need assistance? We’re here to help!
+              </h3>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Phone className="h-5 w-5 text-primary" />
-                  <a href="tel:010-050-0550" className="text-gray-600 hover:text-primary">
-                    010-050-0550
+                  <a
+                    href="tel:+917022993388"
+                    className="text-gray-600 hover:text-primary"
+                  >
+                    7022993388
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-5 w-5 text-primary" />
-                  <a href="mailto:hi@company.co" className="text-gray-600 hover:text-primary">
-                    hi@company.co
+                  <a
+                    href="mailto:info@facilitybazar.com"
+                    className="text-gray-600 hover:text-primary"
+                  >
+                    info@facilitybazar.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span className="text-gray-600">company.co</span>
+                  <span className="text-gray-600">Facility Bazar</span>
                 </div>
               </div>
             </div>

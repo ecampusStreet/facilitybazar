@@ -31,7 +31,7 @@ const services = [
 export default function OurServices() {
   return (
     <section className="py-16 bg-white px-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-screen-xl">
         <div className="text-center mb-12">
           <span className="text-primary font-medium">Our Services</span>
           <h2 className="text-3xl font-bold mt-2">Best Template Site</h2>

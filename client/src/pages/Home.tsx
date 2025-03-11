@@ -18,7 +18,7 @@ export default function Home() {
         <FeaturedPlaces />
         <OurServices />
         <VideoSection />
-        <PricingTables />
+        {/* <PricingTables /> */}
         <ContactSection />
       </main>
       <Footer />

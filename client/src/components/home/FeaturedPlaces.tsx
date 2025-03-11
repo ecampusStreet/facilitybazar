@@ -7,7 +7,7 @@ const places = [
     image:
       "https://plus.unsplash.com/premium_photo-1661962736569-58a67b0a2469?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: { day: 28, month: "August" },
-    title: "Name of place",
+    title: "Bengaluru",
     category: "Category One",
     description: "Description about the place",
   },
@@ -15,7 +15,7 @@ const places = [
     image:
       "https://plus.unsplash.com/premium_photo-1661962736569-58a67b0a2469?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: { day: 20, month: "September" },
-    title: "Name of Place",
+    title: "Mysore",
     category: "Category Two",
     description: "Content about the place",
   },
@@ -23,7 +23,7 @@ const places = [
     image:
       "https://plus.unsplash.com/premium_photo-1661962736569-58a67b0a2469?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: { day: 12, month: "October" },
-    title: "Name of the place",
+    title: "Chennai",
     category: "Category Three",
     description: "Description of the place",
   },
@@ -32,7 +32,7 @@ const places = [
 export default function FeaturedPlaces() {
   return (
     <section className="py-16 bg-gray-50 px-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-screen-xl">
         <div className="text-center mb-12">
           <span className="text-primary font-medium">Featured Places</span>
           <h2 className="text-3xl font-bold mt-2">Lists of places</h2>

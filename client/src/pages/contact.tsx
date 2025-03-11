@@ -38,8 +38,10 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    details: ["123 Business Street", "New York, NY 10001"],
-    href: "https://maps.google.com",
+    details: [
+      "17th Cross Rd, near Orion Mall, A Block, Milk Colony, 2nd Stage, Rajajinagar, Bengaluru, Karnataka 560010",
+    ],
+    href: "https://maps.app.goo.gl/pJCkuu95r8zbEP1J9",
   },
   {
     icon: Clock,

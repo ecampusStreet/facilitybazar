@@ -63,8 +63,8 @@ export default function HousekeepingPage() {
       <main className="flex-grow">
         <div className="relative h-[400px] bg-gradient-to-r from-green-600 to-green-800">
           <div className="absolute houseBackground inset-0" />
-          <div className="relative container mx-auto h-full flex items-center">
-            <div className="text-white max-w-2xl px-10">
+          <div className="relative container mx-auto h-full flex items-center max-w-screen-xl">
+            <div className="text-white max-w-2xl">
               <h1 className="text-4xl font-bold mb-4">
                 Professional B2B Housekeeping Services
               </h1>
@@ -77,7 +77,7 @@ export default function HousekeepingPage() {
         </div>
 
         <section className="py-16 bg-gray-50 px-10">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-screen-xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Services</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -101,7 +101,7 @@ export default function HousekeepingPage() {
         </section>
 
         <section className="py-16 bg-white px-10">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-screen-xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <Card key={index}>

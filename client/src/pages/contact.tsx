@@ -71,7 +71,7 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
-        <div className="relative h-[400px]">
+        {/* <div className="relative h-[400px]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.432561451216!2d77.55238987454712!3d13.00810331407798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17bbc051f1ab%3A0x5b567d40d77191c6!2sWebspruce!5e0!3m2!1sen!2sin!4v1741684220838!5m2!1sen!2sin"
             width="100%"
@@ -194,7 +194,10 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        <h1 className="text-2xl text-zinc-900 text-center py-16">
+          Comming Soon...
+        </h1>
       </main>
       <Footer />
     </div>

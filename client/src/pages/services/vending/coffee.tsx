@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Coffee, Settings, Shield } from "lucide-react";
+import FBBanner from "../../../assets/FBBanner.png";
 
 const features = [
   {
@@ -32,8 +33,8 @@ export default function CoffeeVendingPage() {
       <main className="flex-grow">
         <div className="relative h-[400px] bg-gradient-to-r from-[#6F4E37] to-[#8B4513]">
           <div className="absolute coffeeBackground inset-0" />
-          <div className="relative container mx-auto h-full flex items-center">
-            <div className="text-white max-w-2xl px-10">
+          <div className="relative container mx-auto h-full max-w-screen-xl flex items-center">
+            <div className="text-white max-w-2xl">
               <h1 className="text-4xl font-bold mb-4">
                 Smart Coffee Vending Solutions
               </h1>
@@ -46,7 +47,7 @@ export default function CoffeeVendingPage() {
         </div>
 
         <section className="py-16 bg-gray-50 px-10">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-screen-xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((Feature, index) => (
                 <Card key={index}>
@@ -62,20 +63,26 @@ export default function CoffeeVendingPage() {
         </section>
 
         <section className="py-16 bg-white">
-          <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
+          <div className="container mx-auto max-w-screen-xl">
+            <div className="mx-auto">
+              <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4">
                   Why Choose Our Vending Solutions?
                 </h2>
-                <p className="text-gray-600">
+                {/* <p className="text-gray-600">
                   Our coffee vending machines deliver premium beverages with
                   consistency and convenience, perfect for offices,
                   institutions, and public spaces.
-                </p>
+                </p> */}
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <img
+                  src={FBBanner}
+                  alt="Coffee Vending Machine"
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1664970900255-a3bdb8620842?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Coffee Vending Machine"
@@ -83,6 +90,11 @@ export default function CoffeeVendingPage() {
                 />
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold">Features & Benefits</h3>
+                  <p className="text-gray-600">
+                    Our coffee vending machines deliver premium beverages with
+                    consistency and convenience, perfect for offices,
+                    institutions, and public spaces.
+                  </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
                       <Coffee className="h-5 w-5 text-primary" />

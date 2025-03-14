@@ -34,8 +34,8 @@ export default function CafeteriaPage() {
       <main className="flex-grow">
         <div className="relative h-[400px] bg-gradient-to-r from-primary/90 to-primary">
           <div className="absolute cafeteriaBackground inset-0 " />
-          <div className="relative container mx-auto h-full flex items-center">
-            <div className="text-white max-w-2xl px-10">
+          <div className="relative container mx-auto h-full flex items-center max-w-screen-xl">
+            <div className="text-white max-w-2xl">
               <h1 className="text-4xl font-bold mb-4">
                 Corporate Food and Beverage Solutions
               </h1>
@@ -48,7 +48,7 @@ export default function CafeteriaPage() {
         </div>
 
         <section className="py-16 bg-gray-50 px-10">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-screen-xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <Card key={index}>

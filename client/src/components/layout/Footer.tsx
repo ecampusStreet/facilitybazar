@@ -16,21 +16,24 @@ export default function Footer() {
               service.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="https://www.facebook.com/"
+                className="text-gray-400 hover:text-white"
+              >
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              {/* <a href="#" className="text-gray-400 hover:text-white">
                 <Instagram className="h-6 w-6" />
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/company/105632742/admin/dashboard/"
                 className="text-gray-400 hover:text-white"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              {/* <a href="#" className="text-gray-400 hover:text-white">
                 <Rss className="h-6 w-6" />
-              </a>
+              </a> */}
             </div>
           </div>
 

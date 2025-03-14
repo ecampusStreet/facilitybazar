@@ -36,8 +36,8 @@ export default function AboutPage() {
       <main className="flex-grow">
         <div className="relative h-[400px] bg-gradient-to-r from-primary to-primary/80">
           <div className="absolute inset-0 aboutBackground bg-black/50" />
-          <div className="relative container mx-auto h-full flex items-center">
-            <div className="text-white max-w-2xl px-10">
+          <div className="relative container mx-auto h-full flex items-center max-w-screen-xl">
+            <div className="text-white max-w-2xl">
               <h1 className="text-4xl font-bold mb-4">About Facility Bazar</h1>
               <p className="text-lg">
                 Your trusted partner in comprehensive facility management and
@@ -48,7 +48,7 @@ export default function AboutPage() {
         </div>
 
         <section className="py-16 bg-white">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-screen-xl">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-8">
@@ -75,7 +75,7 @@ export default function AboutPage() {
         </section>
 
         <section className="py-16 bg-gray-50 px-10">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-screen-xl">
             <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (

@@ -16,10 +16,10 @@ export default function Home() {
         <Banner />
         <PopularServices />
         <FeaturedPlaces />
-        <OurServices />
         <VideoSection />
+        <OurServices />
         {/* <PricingTables /> */}
-        <ContactSection />
+        {/* <ContactSection /> */}
       </main>
       <Footer />
     </div>

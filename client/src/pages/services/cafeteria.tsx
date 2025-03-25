@@ -2,28 +2,28 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CorporateTuckShop from "../../assets/s1.png";
+import TailoredCateringSolutions from "../../assets/s2.png";
+import InteractiveLiveCounters from "../../assets/s3.png";
 
 const features = [
   {
     title: "Corporate Tuck Shop",
     description:
       "Our corporate tuck shop solutions redefine convenience by offering a thoughtfully curated selection of snacks, beverages, and quick bites tailored to diverse preferences.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1664910905021-fd519ebcded5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: CorporateTuckShop,
   },
   {
     title: "Tailored Catering Solutions",
     description:
       "Elevate your corporate events with our bespoke catering services, designed to leave a lasting impression. From delightful breakfasts to elaborate multi-course meals.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1663090925863-248813831d5d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: TailoredCateringSolutions,
   },
   {
     title: "Interactive Live Counters",
     description:
       "Engage and delight your guests with our live food counters, where culinary artistry meets interactivity. Watch our chefs prepare dishes live, adding a dynamic element.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1664301187629-8ba030b64337?q=80&w=2063&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: InteractiveLiveCounters,
   },
 ];
 

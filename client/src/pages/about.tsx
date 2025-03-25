@@ -36,27 +36,68 @@ export default function AboutPage() {
       <main className="flex-grow">
         <div className="relative h-[400px] bg-gradient-to-r from-primary to-primary/80">
           <div className="absolute inset-0 aboutBackground bg-black/50" />
-          <div className="relative container mx-auto h-full flex items-center max-w-screen-xl">
+          <div className="relative container mx-auto h-full flex items-center justify-center text-center max-w-screen-xl">
             <div className="text-white max-w-2xl">
               <h1 className="text-4xl font-bold mb-4">About Facility Bazar</h1>
-              <p className="text-lg">
-                Your trusted partner in comprehensive facility management and
-                corporate services
-              </p>
             </div>
           </div>
         </div>
 
         <section className="py-16 bg-white">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6">
+                Your trusted partner in comprehensive facility management and
+                corporate services
+              </h2>
+
+              <p className="text-gray-600">
+                In today’s fast-paced world, businesses and individuals face
+                increasing challenges in managing their facilities efficiently.
+                The need for reliable, cost-effective, and professional facility
+                management services has never been more critical. FacilityBazar
+                was founded with a vision to bridge the gap between service
+                providers and consumers, offering a one-stop solution for all
+                facility-related needs.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="py-16 bg-white">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+              <p className="text-gray-600">
+                At FacilityBazar, our mission is to simplify facility management
+                by offering a seamless, technology-driven marketplace where
+                businesses and individuals can find reliable services with ease.
+                We aim to enhance efficiency, reduce operational costs, and
+                ensure top-notch quality across all facility management needs.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="py-16 bg-white">
           <div className="container mx-auto max-w-screen-xl">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-8">
-                Facility Bazar was founded with a vision to transform corporate
-                facility management through innovative solutions and exceptional
-                service. We understand the unique challenges businesses face in
-                maintaining efficient workspaces and have developed
-                comprehensive solutions to address these needs.
+                FacilityBazar was born out of a simple yet powerful idea: to
+                revolutionize the way facility management services are accessed
+                and delivered. The founders, with extensive experience in
+                facility management, real estate, and technology, recognized the
+                industry’s fragmented nature. Service seekers often struggled
+                with inconsistent quality, lack of transparency, and unverified
+                vendors. FacilityBazar set out to change this by creating a
+                structured, tech-driven platform that connects customers with
+                trusted service providers.
+              </p>
+              <p className="text-gray-600 mb-8">
+                Starting as a small initiative, FacilityBazar rapidly expanded
+                its offerings, integrating AI-driven analytics, real-time
+                tracking, and verified professional networks. Today, we cater to
+                a wide range of industries, including Corporate Offices,
+                Residential Complexes, Retail Spaces, and Industrial units.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <img
@@ -85,20 +126,6 @@ export default function AboutPage() {
                   <p className="text-gray-600">{value.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-white">
-          <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-              <p className="text-gray-600">
-                To provide innovative and sustainable facility management
-                solutions that enable businesses to focus on their core
-                operations while we handle their workspace needs with excellence
-                and reliability.
-              </p>
             </div>
           </div>
         </section>

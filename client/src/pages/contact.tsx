@@ -80,9 +80,12 @@ export default function ContactPage() {
             allowFullScreen
             loading="lazy"
           />
-        </div>
+        </div> */}
 
-        <section className="py-16 bg-white">
+        {/* <h1 className="text-2xl text-zinc-900 text-center py-16">
+          Comming Soon...
+        </h1> */}
+        <section className="py-16">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -163,9 +166,9 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold mb-6">
+                  {/* <h2 className="text-2xl font-bold mb-6">
                     Contact Information
-                  </h2>
+                  </h2> */}
                   <div className="grid gap-6">
                     {contactInfo.map((item, index) => (
                       <div key={index} className="flex items-start gap-4">
@@ -194,10 +197,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </section> */}
-        <h1 className="text-2xl text-zinc-900 text-center py-16">
-          Comming Soon...
-        </h1>
+        </section>
       </main>
       <Footer />
     </div>

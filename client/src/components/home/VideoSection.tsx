@@ -8,7 +8,7 @@ export default function VideoSection() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: "rgb(1 156 255)",
+          backgroundColor: "black",
         }}
       >
         <video
@@ -16,7 +16,7 @@ export default function VideoSection() {
           loop
           muted
           className="absolute inset-0 w-full h-full object-contain"
-          controls
+          // controls
         >
           <source src={videoSrc} type="video/mp4" />
         </video>

@@ -6,23 +6,26 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import S1 from "../../assets/packedFoods.png";
+import snacksVending from "../../assets/snacksVending.jpeg";
+import S4 from "../../assets/s4.jpeg";
 
 const services = [
   {
-    icon: "https://www.facilitybazar.com/img/service_icon_1.png",
-    title: "High Quality Design",
+    icon: S1,
+    title: "High Quality Packed Food",
     description:
       "Etiam viverra nibh at lorem hendrerit porta non nec ligula. Donec hendrerit porttitor pretium.",
   },
   {
-    icon: "https://www.facilitybazar.com/img/service_icon_2.png",
+    icon: snacksVending,
     title: "Fully Customizable",
     description:
       "Vivamus nec vehicula felis, sit amet convallis ex. Aenean dolor risus, rutrum at tincidunt eget.",
   },
   {
-    icon: "https://www.facilitybazar.com/img/service_icon_3.png",
-    title: "Best HTML CSS Layout",
+    icon: S4,
+    title: "Best Cleaning Solutions supplies",
     description:
       "Praesent nec dui sed urna pharetra dapibus at ac elit. Aenean hendrerit metus leo.",
   },
@@ -33,8 +36,7 @@ export default function OurServices() {
     <section className="py-16 bg-white px-10">
       <div className="container mx-auto max-w-screen-xl">
         <div className="text-center mb-12">
-          <span className="text-primary font-medium">Our Services</span>
-          <h2 className="text-3xl font-bold mt-2">Best Template Site</h2>
+          <h2 className="text-3xl font-bold mt-2">Our Services</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -44,7 +46,7 @@ export default function OurServices() {
                 <img
                   src={service.icon}
                   alt={service.title}
-                  className="w-16 h-16 mx-auto mb-4"
+                  className="w-56 h-56 mx-auto mb-4"
                 />
                 <h4 className="text-xl font-bold mb-4">{service.title}</h4>
                 <p className="text-gray-600">{service.description}</p>

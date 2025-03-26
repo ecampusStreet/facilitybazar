@@ -1,52 +1,36 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Link } from "wouter";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowBigLeft, Plus } from "lucide-react";
-import FBImg from "../../assets/F&B.jpg";
-import packedFoods from "../../assets/packedFoods.png";
+import FBSolution from "../../assets/F&B.avif";
+import tea from "../../assets/Tea-Coffee.avif";
+import snacksVending from "../../assets/snacksVending.jpeg";
+import Stationary from "../../assets/Stationary.avif";
 import B2B from "../../assets/B2B.png";
-import froots from "../../assets/froots.jpg";
-import supplies from "../../assets/supplies.png";
-import facilitymanagement from "../../assets/facilitymanagement.png";
-import { Link } from "wouter";
 
 const services = [
   {
-    image:
-      "https://images.unsplash.com/photo-1626216378161-3d95b26775e2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: FBSolution,
     title: "F&B Solution",
     goToLink: "/services/cafeteria",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1735138580230-ff15367d13cf?q=80&w=1940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: tea,
     title: "Tea/Coffee Vending",
     goToLink: "/services/vending/coffee",
   },
   {
-    // image: packedFoods,
-    image:
-      "https://images.unsplash.com/photo-1575224526797-5730d09d781d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: snacksVending,
     title: "Snacks Vending",
     goToLink: "/services/vending/snacks",
   },
   {
     image: B2B,
-    // image:
-    //   "https://plus.unsplash.com/premium_photo-1726662888316-99f7cd75f34d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
     title: "B2B/Housekeeping",
     goToLink: "/services/housekeeping",
   },
   {
-    // image: supplies,
-    image:
-      "https://images.unsplash.com/photo-1653946402569-a493931970c1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: Stationary,
     title: "Stationary Supply",
     goToLink: "/services/stationary",
   },
@@ -69,7 +53,7 @@ export default function PopularServices() {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-64 object-cover"
                   />
 
                   {/* Hover Overlay */}

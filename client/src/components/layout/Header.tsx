@@ -45,7 +45,7 @@ export default function Header() {
                     <div className="flex flex-col space-y-1">
                       <ListItem
                         href="/services/cafeteria"
-                        title="F&B Counter"
+                        title="F&B Solution"
                         description="Modern Corporate Cafeteria Management Solutions"
                       />
                       <ListItem

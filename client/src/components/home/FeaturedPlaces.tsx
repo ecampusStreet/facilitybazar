@@ -115,7 +115,7 @@ export default function FeaturedPlaces() {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mt-2">Regions We Serve</h2>
       </div>
-      <Carousel className="">
+      <Carousel autoScrollInterval={5000}>
         <CarouselContent className="flex gap-5">
           {places.map((place, index) => (
             <CarouselItem

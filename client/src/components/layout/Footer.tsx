@@ -3,7 +3,7 @@ import logo from "../../assets/logo.jpg";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16 px-20">
+    <footer className="bg-gray-900 text-white py-16 px-20 mt-20">
       <div className="container mx-auto max-w-screen-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>

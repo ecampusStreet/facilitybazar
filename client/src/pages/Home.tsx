@@ -17,7 +17,7 @@ export default function Home() {
         <PopularServices />
         <FeaturedPlaces />
         <VideoSection />
-        <OurServices />
+        {/* <OurServices /> */}
         {/* <PricingTables /> */}
         {/* <ContactSection /> */}
       </main>

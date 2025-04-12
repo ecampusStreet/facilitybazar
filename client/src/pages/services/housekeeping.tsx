@@ -3,32 +3,31 @@ import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, ShieldCheck, Recycle, Users } from "lucide-react";
-import housekeepingSuply from "../../assets/housekeepingSuply.jpeg";
 
 const services = [
   {
     icon: Sparkles,
-    title: "Cleaning Solutions",
+    title: "Pantry Supplies",
     description:
       "Comprehensive selection of eco-friendly cleaning agents for various surfaces, ensuring a pristine workspace.",
   },
   {
     icon: ShieldCheck,
-    title: "Sanitization",
+    title: "Housekeeping",
     description:
-      "Advanced sanitizing products for maintaining a healthy workspace with protection against harmful bacteria.",
+      "Advanced Housekeeping products for maintaining a healthy workspace with protection against harmful bacteria.",
   },
   {
     icon: Recycle,
-    title: "Waste Management",
+    title: "Stationary & office supplies",
     description:
-      "Complete waste management solutions including bins, recycling containers, and efficient segregation systems.",
+      "Complete Stationary & office supplies solutions including bins, recycling containers, and efficient segregation systems.",
   },
   {
     icon: Users,
-    title: "Staff Support",
+    title: "Fresh Fruit Supply",
     description:
-      "Professional housekeeping staff and support for maintaining clean and organized workspaces.",
+      "Professional Corporate Services staff and support for maintaining clean and organized workspaces.",
   },
 ];
 
@@ -66,11 +65,11 @@ export default function HousekeepingPage() {
           <div className="relative container mx-auto h-full flex items-center max-w-screen-xl">
             <div className="text-white max-w-2xl">
               <h1 className="text-4xl font-bold mb-4">
-                Professional B2B Housekeeping Services
+                Professional Corporate Services
               </h1>
               <p className="text-lg">
-                Comprehensive facility management and housekeeping solutions for
-                corporate environments
+                Comprehensive facility management and Corporate Services
+                solutions for corporate environments
               </p>
             </div>
           </div>
@@ -79,10 +78,14 @@ export default function HousekeepingPage() {
         <section className="py-16 bg-gray-50 px-10">
           <div className="container mx-auto max-w-screen-xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+              <h2 className="text-3xl font-bold mb-4">Corporate Services</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                We provide complete housekeeping and maintenance solutions to
-                keep your workplace clean, organized, and efficient.
+                . At FacilityBazar, we provide businesses with a seamless,
+                cost-effective, and reliable solution for their corporate supply
+                needs. Whether you require office essentials, hygiene and
+                sanitation products, pantry supplies, or technology peripherals,
+                our comprehensive procurement platform ensures efficiency,
+                quality, and timely delivery.
               </p>
             </div>
 
@@ -129,20 +132,20 @@ export default function HousekeepingPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50">
+        {/* <section className="py-16 bg-gray-50">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8">
                 Ready to Transform Your Workplace?
               </h2>
               <p className="text-gray-600 mb-8">
-                Contact us today to discuss how our professional housekeeping
-                services can benefit your organization.
+                Contact us today to discuss how our professional corporate
+                services services can benefit your organization.
               </p>
               <Button size="lg">Get a Quote</Button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

@@ -19,7 +19,7 @@ function Router() {
       <Route path="/services/cafeteria" component={CafeteriaPage} />
       <Route path="/services/vending/coffee" component={CoffeeVendingPage} />
       <Route path="/services/vending/snacks" component={SnacksVendingPage} />
-      <Route path="/services/housekeeping" component={HousekeepingPage} />
+      <Route path="/services/corporate-services" component={HousekeepingPage} />
       <Route path="/services/stationary" component={StationaryPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />

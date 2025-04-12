@@ -14,19 +14,33 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FormSelect } from "@/components/ui/FormSelect";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   subject: z.string().min(2, "Subject must be at least 2 characters"),
+  services: z.string(),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
+
+const options = [
+  {
+    value: "Cafeteria Management Solutions",
+    label: "Cafeteria Management Solutions",
+  },
+  { value: "Tea/Coffee Vending", label: "Tea/Coffee Vending" },
+  { value: "Snacks Vending", label: "Snacks Vending" },
+  { value: "Corporate Services", label: "Corporate Services" },
+  { value: "Stationary Supply", label: "Stationary Supply" },
+];
 
 const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+917022993388"],
+    details: ["+91 7022 993 388"],
     href: "tel:+917022993388",
   },
   {
@@ -39,14 +53,14 @@ const contactInfo = [
     icon: MapPin,
     title: "Address",
     details: [
-      "17th Cross Rd, near Orion Mall, A Block, Milk Colony, 2nd Stage, Rajajinagar, Bengaluru, Karnataka 560010",
+      "17th Cross Rd, near Orion Mall, Rajajinagar, Bengaluru, Karnataka 560010",
     ],
     href: "https://maps.app.goo.gl/pJCkuu95r8zbEP1J9",
   },
   {
     icon: Clock,
     title: "Business Hours",
-    details: ["Monday - Friday: 9 AM - 6 PM", "Saturday: 10 AM - 2 PM"],
+    details: ["Mon - Fri: 9 AM - 6 PM", "Sat: 10 AM - 2 PM"],
     href: null,
   },
 ];
@@ -58,147 +72,162 @@ export default function ContactPage() {
       name: "",
       email: "",
       subject: "",
+      services: "",
       message: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-    // Handle form submission
   }
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow">
-        {/* <div className="relative h-[400px]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.432561451216!2d77.55238987454712!3d13.00810331407798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17bbc051f1ab%3A0x5b567d40d77191c6!2sWebspruce!5e0!3m2!1sen!2sin!4v1741684220838!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-          />
-        </div> */}
 
-        {/* <h1 className="text-2xl text-zinc-900 text-center py-16">
-          Comming Soon...
-        </h1> */}
-        <section className="py-16">
-          <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-                <p className="text-gray-600">
-                  Get in touch with us for any questions about our services or
-                  to request a quote
-                </p>
+      {/* Banner */}
+      <div className="relative h-[380px] ContactBackground bg-gradient-to-r from-primary to-primary/80 flex items-center justify-center text-white text-center">
+        <div>
+          <h1 className="text-6xl font-bold mb-2">Get in Touch</h1>
+          <p>
+            Reach out to us for more information about our products and
+            services.
+          </p>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <section className="bg-gray-50 -mt-20 pb-6 flex-grow">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden md:flex relative z-10">
+            {/* Contact Info */}
+            <div className="bg-blue-600 text-white p-8 md:w-1/2">
+              <h2 className="text-2xl font-semibold mb-6">Contact</h2>
+              <div className="space-y-6">
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <item.icon className="w-6 h-6 mt-1 text-white" />
+                    <div>
+                      <h3 className="font-semibold">{item.title}</h3>
+                      {item.details.map((detail, i) => (
+                        <p key={i} className="text-sm">
+                          {item.href ? (
+                            <a
+                              href={item.href}
+                              className="hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {detail}
+                            </a>
+                          ) : (
+                            detail
+                          )}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                  <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-                  <Form {...form}>
-                    <form
-                      onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-6"
-                    >
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your name" {...field} />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your email" {...field} />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="subject"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Subject</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Message subject" {...field} />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Message</FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="Your message"
-                                className="min-h-[150px]"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <Button type="submit">Send Message</Button>
-                    </form>
-                  </Form>
-                </div>
-
-                <div>
-                  {/* <h2 className="text-2xl font-bold mb-6">
-                    Contact Information
-                  </h2> */}
-                  <div className="grid gap-6">
-                    {contactInfo.map((item, index) => (
-                      <div key={index} className="flex items-start gap-4">
-                        <item.icon className="w-6 h-6 text-primary mt-1" />
-                        <div>
-                          <h3 className="font-bold mb-2">{item.title}</h3>
-                          {item.details.map((detail, i) => (
-                            <p key={i} className="text-gray-600">
-                              {item.href ? (
-                                <a
-                                  href={item.href}
-                                  className="hover:text-primary transition-colors"
-                                >
-                                  {detail}
-                                </a>
-                              ) : (
-                                detail
-                              )}
-                            </p>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              {/* Socials */}
+              <div className="mt-6 flex space-x-4 text-xl">
+                <FaFacebookF className="text-white text-xl" />
+                <a href="#" className="hover:text-white">
+                  <FaLinkedinIn className="text-white text-xl" />
+                </a>
+                <a href="#" className="hover:text-white">
+                  <FaInstagram className="text-white text-xl" />
+                </a>
               </div>
             </div>
+
+            {/* Contact Form */}
+            <div className="p-8 md:w-1/2 bg-white">
+              <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-5"
+                >
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Your Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter your name" {...field} />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Your Email</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter your email" {...field} />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="services"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Select the Service</FormLabel>
+                        <FormSelect
+                          label="Select the Service"
+                          options={options}
+                          placeholder="Choose a Service"
+                          {...field}
+                        />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Subject</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter subject" {...field} />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Your Message</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Write your message..."
+                            className="min-h-[120px]"
+                            {...field}
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                  <Button type="submit" className="mt-4">
+                    Send
+                  </Button>
+                </form>
+              </Form>
+            </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+
+      {/* Footer */}
       <Footer />
     </div>
   );

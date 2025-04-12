@@ -47,7 +47,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/services/housekeeping"
+                  href="/services/corporate-services"
                   className="text-gray-400 hover:text-white"
                 >
                   Our Services

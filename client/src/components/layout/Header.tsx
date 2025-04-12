@@ -45,7 +45,7 @@ export default function Header() {
                     <div className="flex flex-col space-y-1">
                       <ListItem
                         href="/services/cafeteria"
-                        title="F&B Solution"
+                        title="Cafeteria Management Solutions"
                         description="Modern Corporate Cafeteria Management Solutions"
                       />
                       <ListItem
@@ -59,9 +59,9 @@ export default function Header() {
                         description="Automated Snacks and Beverages Vending"
                       />
                       <ListItem
-                        href="/services/housekeeping"
-                        title="B2B/Housekeeping"
-                        description="Professional Housekeeping Services"
+                        href="/services/corporate-services"
+                        title="Corporate Services"
+                        description="Professional Corporate Services"
                       />
                       <ListItem
                         href="/services/stationary"
@@ -128,7 +128,7 @@ export default function Header() {
             className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            F&B Counter
+            Cafeteria Management Solutions
           </Link>
           <Link
             href="/services/vending/coffee"
@@ -145,11 +145,11 @@ export default function Header() {
             Snacks Vending
           </Link>
           <Link
-            href="/services/housekeeping"
+            href="/services/Corporate Services"
             className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            B2B/Housekeeping
+            Corporate Services
           </Link>
           <Link
             href="/services/stationary"

@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowBigLeft, Plus } from "lucide-react";
 import FBSolution from "../../assets/F&B.avif";
 import tea from "../../assets/Tea-Coffee.avif";
 import snacksVending from "../../assets/snacksVending.jpeg";
@@ -26,8 +25,8 @@ const services = [
   },
   {
     image: B2B,
-    title: "B2B/Housekeeping",
-    goToLink: "/services/housekeeping",
+    title: "Corporate Services",
+    goToLink: "/services/corporate-services",
   },
   {
     image: Stationary,

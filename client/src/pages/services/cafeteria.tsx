@@ -76,7 +76,7 @@ export default function CafeteriaPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        {/* <section className="py-16 bg-white">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8">
@@ -91,7 +91,7 @@ export default function CafeteriaPage() {
               <Button size="lg">Contact Us Today</Button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

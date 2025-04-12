@@ -4,14 +4,27 @@ import { z } from "zod";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { FormSelect } from "../ui/FormSelect";
 
 const formSchema = z.object({
   name: z.string().min(2),
   mobile: z.string().min(10),
   email: z.string().email(),
   city: z.string().min(2),
+  services: z.string(),
   requirement: z.string().min(2),
 });
+
+const options = [
+  {
+    value: "Cafeteria Management Solutions",
+    label: "Cafeteria Management Solutions",
+  },
+  { value: "Tea/Coffee Vending", label: "Tea/Coffee Vending" },
+  { value: "Snacks Vending", label: "Snacks Vending" },
+  { value: "Corporate Services", label: "Corporate Services" },
+  { value: "Stationary Supply", label: "Stationary Supply" },
+];
 
 export default function Banner() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -21,6 +34,7 @@ export default function Banner() {
       mobile: "",
       email: "",
       city: "",
+      services: "",
       requirement: "",
     },
   });
@@ -109,6 +123,19 @@ export default function Banner() {
                       <Input placeholder="Requirement" {...field} />
                     </FormControl>
                   </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="services"
+                render={({ field }) => (
+                  <FormSelect
+                    label="Select the Service"
+                    options={options}
+                    placeholder="Choose a Service"
+                    {...field}
+                  />
                 )}
               />
 

@@ -43,7 +43,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <section className="py-16 bg-white">
+        <section className="py-6 bg-white">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">
@@ -63,7 +63,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-        <section className="py-16 bg-white">
+        <section className="py-3 bg-white">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
@@ -77,7 +77,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-        <section className="py-16 bg-white">
+        <section className="py-3 bg-white">
           <div className="container mx-auto max-w-screen-xl">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>

@@ -9,25 +9,53 @@ const services = [
     icon: Sparkles,
     title: "Pantry Supplies",
     description:
-      "Comprehensive selection of eco-friendly cleaning agents for various surfaces, ensuring a pristine workspace.",
+      "Your go-to partner for reliable and efficient pantry supply solutions tailored for modern workspaces.",
+    points: [
+      "☕ Hot Beverages – Tea, Coffee, Green Tea, Instant Mixes",
+      "🧃 Cold Beverages – Juices, Flavored Water, Energy Drinks",
+      "🍪 Snacks – Biscuits, Cookies, Namkeen, Dry Fruits, Chips",
+      "🧂 Condiments & Essentials – Sugar, Salt, Spices, Sauces",
+      "🧼 Pantry Utilities – Paper Napkins, Cups, Stirrers, Dispensers",
+    ],
   },
   {
     icon: ShieldCheck,
     title: "Housekeeping",
     description:
-      "Advanced Housekeeping products for maintaining a healthy workspace with protection against harmful bacteria.",
+      "HK solutions ensure your workplace stays spotless, hygienic, and welcoming — every day. From basic cleaning materials to advanced sanitation supplies, we deliver everything needed for a well-maintained facility.",
+    points: [
+      "🧹 Cleaning Tools & Equipment – Mops, Brooms, Dustpans, Floor Scrubbers",
+      "🧴Cleaning Agents – Floor Cleaners, Glass Cleaners, Disinfectants, Toilet Cleaners",
+      "🧽 Consumables – Tissue Rolls, Garbage Bags, Liquid Soaps, Air Fresheners",
+      "🧤 Safety & Utility – Gloves, Aprons, Face Masks, Cleaning Caddies",
+      "🪣 Buckets & Storage – Utility Trolleys, Buckets, Dispensers",
+    ],
   },
   {
     icon: Recycle,
     title: "Stationary & office supplies",
     description:
-      "Complete Stationary & office supplies solutions including bins, recycling containers, and efficient segregation systems.",
+      "We provide a comprehensive range of everyday office essentials to support efficiency, organization, and professionalism across your business operations.",
+    points: [
+      "✏️ Writing Essentials – Pens, Pencils, Markers, Highlighters",
+      "📒 Paper Products – Notebooks, Diaries, Printing Paper, Sticky Notes",
+      "📎 Office Stationery – Folders, Files, Envelopes, Clips, Staplers",
+      "🖨️ Printer & Copier Supplies – Toners, Ink Cartridges, Photocopy Paper",
+      "📦 Packaging Supplies – Bubble Wrap, Tape, Corrugated Boxes, Labels",
+    ],
   },
   {
     icon: Users,
     title: "Fresh Fruit Supply",
     description:
-      "Professional Corporate Services staff and support for maintaining clean and organized workspaces.",
+      " We deliver hand-picked, seasonal fruits directly to your workplace — ensuring your team enjoys healthy, energizing snacks every day.",
+    points: [
+      "🍎 Seasonal & Exotic Fruits – Apples, Bananas, Oranges, Grapes, Berries & more",
+      "🍍 Curated Fruit Baskets – Daily, Weekly, or Customized Fruit Hampers",
+      "🥭 Local & Organic Options – Farm-fresh fruits sourced responsibly",
+      "🥗 Cut Fruit Trays – Ready-to-serve, hygienically packed options (on request)",
+      "🚚 Scheduled Deliveries – Freshness guaranteed through regular replenishments",
+    ],
   },
 ];
 
@@ -89,13 +117,25 @@ export default function HousekeepingPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {services.map((service, index) => (
                 <Card key={index}>
-                  <CardContent className="p-6 text-center">
-                    <service.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-gray-600">{service.description}</p>
+                  <CardContent className="px-10 py-8">
+                    <service.icon className="w-16 h-16 mx-auto mb-4 text-primary" />
+                    <h3 className="text-xl font-bold mb-2 text-center">
+                      {service.title}
+                    </h3>
+                    <p className="text-zinc-800 font-semibold py-2">
+                      {service.description}
+                    </p>
+                    <h6 className="text-zinc-900 font-bold py-2">
+                      What We Offer:
+                    </h6>
+                    <ul className="list-disc pl-8">
+                      {service.points.map((offer) => (
+                        <li className="py-2 font-semibold">{offer}</li>
+                      ))}
+                    </ul>
                   </CardContent>
                 </Card>
               ))}

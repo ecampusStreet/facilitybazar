@@ -1,10 +1,10 @@
 import { Link } from "wouter";
 
 import { Card, CardContent } from "@/components/ui/card";
-import FBSolution from "../../assets/F&B.avif";
-import tea from "../../assets/Tea-Coffee.avif";
-import snacksVending from "../../assets/snacksVending.jpeg";
-import Stationary from "../../assets/Stationary.avif";
+import FBSolution from "../../assets/f&b.png";
+import tea from "../../assets/tea&cofee.png";
+import snacksVending from "../../assets/s.png";
+import Stationary from "../../assets/fruits.jpg";
 import B2B from "../../assets/B2B.png";
 
 const services = [
@@ -26,11 +26,10 @@ const services = [
   {
     image: B2B,
     title: "Corporate Services",
-    goToLink: "/services/corporate-services",
   },
   {
     image: Stationary,
-    title: "Stationary Supply",
+    title: "Fresh Fruit",
     goToLink: "/services/stationary",
   },
 ];

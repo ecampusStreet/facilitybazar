@@ -26,11 +26,12 @@ const services = [
   {
     image: B2B,
     title: "Corporate Services",
+    goToLink: "/services/corporate-services",
   },
   {
     image: Stationary,
     title: "Fresh Fruit",
-    goToLink: "/services/stationary",
+    goToLink: "/services/fresh-fruits",
   },
 ];
 

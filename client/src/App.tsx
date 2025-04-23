@@ -11,6 +11,7 @@ import HousekeepingPage from "@/pages/services/housekeeping";
 import StationaryPage from "@/pages/services/stationary";
 import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
+import FruitVendingPage from "./pages/services/FruitVendingPage";
 
 function Router() {
   return (
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/services/vending/snacks" component={SnacksVendingPage} />
       <Route path="/services/corporate-services" component={HousekeepingPage} />
       <Route path="/services/stationary" component={StationaryPage} />
+      <Route path="/services/fresh-fruits" component={FruitVendingPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />

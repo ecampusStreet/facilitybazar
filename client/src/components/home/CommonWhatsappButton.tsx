@@ -6,7 +6,7 @@ const CommonWhatsappButton = () => {
         {/* Vertical Buttons */}
         <div className="space-y-2">
           <a
-            href="https://wa.me/91974334555?text=Hi, I'm interested in your services!"
+            href="https://wa.me/917022993388?text=Hi, I'm interested in your services!"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-r-lg block"
@@ -14,7 +14,7 @@ const CommonWhatsappButton = () => {
             <FaWhatsapp size={20} />
           </a>
           <a
-            href="https://linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/company/105632742/admin/dashboard/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-cyan-700 hover:bg-cyan-800 text-white p-3 rounded-r-lg block"

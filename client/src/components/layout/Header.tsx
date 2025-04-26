@@ -64,9 +64,9 @@ export default function Header() {
                         description="Professional Corporate Services"
                       />
                       <ListItem
-                        href="/services/stationary"
-                        title="Stationary Supply"
-                        description="Office Supplies and Cleaning Products"
+                        href="/services/fresh-fruits"
+                        title="Fresh Fruits"
+                        description="healthy and High-quality, hygienic packaging"
                       />
                     </div>
                   </div>
@@ -152,11 +152,11 @@ export default function Header() {
             Corporate Services
           </Link>
           <Link
-            href="/services/stationary"
+            href="/services/fresh-fruits"
             className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            Stationary Supply
+            Fresh Fruits
           </Link>
           <Link
             href="/about"
